@@ -1021,6 +1021,7 @@ h2.counter span{
 .sk-title{
     font-size: 1rem;
     font-weight: 500;
+    color: var(--font-color);
 }
 
 /*======================= footer section ============================ */
