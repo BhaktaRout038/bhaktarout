@@ -24,7 +24,7 @@
   emailjs.init('ivkc8pPC0syD70ma6')
 </script>
 </head>
-<body>
+<body oncontextmenu="return false">
     <div class="overlay"></div>
     <header>
         <a href="#" class="logo"><span>Bhakta</span></a>
@@ -655,4 +655,15 @@ function showMessage(message) {
             messageDiv.style.display = 'none';
         }, 5000); // 5000 milliseconds = 5 seconds
     }
+
+     // Listen for keydown event , prevent F12 to inspect page
+     document.addEventListener('keydown', function(event) {
+                // Check if F12 key was pressed
+                if (event.keyCode === 123) {
+                    // Prevent default behavior (opening developer tools)
+                    event.preventDefault();
+                    // Optionally, you can also display a message to the user
+                    console.log('Inspect Element is disabled on this website.');
+                }
+            });
 </script>
