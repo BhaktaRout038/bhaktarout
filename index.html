@@ -665,5 +665,9 @@ function showMessage(message) {
                     // Optionally, you can also display a message to the user
                    // console.log('Inspect Element is disabled on this website.');
                 }
+
+                if (event.ctrlKey && event.shiftKey && event.key === "I") {
+                    event.preventDefault();
+                }
             });
 </script>
